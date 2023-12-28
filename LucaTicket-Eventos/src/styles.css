@@ -19,8 +19,10 @@
   }
  
   .header-container h2 {
-    color: #ffffff; /* Texto blanco para la cabecera */
+    color: #007bff; /* Texto blanco para la cabecera */
   }
+
+  
   
 .table th,
 .table td {
