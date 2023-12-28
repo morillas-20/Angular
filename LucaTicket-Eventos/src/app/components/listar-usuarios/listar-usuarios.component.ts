@@ -24,4 +24,8 @@ export class ListarUsuariosComponent implements OnInit{
     });
   }
 
+  irEventos(){
+    this.router.navigate(["../eventos"])
+  }
+
 }

@@ -1,26 +1,37 @@
-<!-- listar-usuarios.component.html -->
+<div class="container mt-4">
+  <div class="header-container mb-4 d-flex justify-content-between align-items-center">
+    <!-- Botón de Eventos de color amarillo -->
+    <button class="btn btn-warning btn-lg" (click)="irEventos()">Eventos</button>
 
-<div class="col-md-6">
-  <h2>User Details</h2>
+    <!-- Título en el centro -->
+    <h2 class="mb-0">Users Details</h2>
+
+    <!-- Botón de Añadir a la derecha -->
+    <button class="btn btn-success btn-lg">Añadir</button>
+  </div>
   
-  <table class="table table-striped">
-    <thead>
+  <table class="table table-bordered table-hover table-primary w-100 mx-auto">
+    <thead class="thead-dark">
       <tr>
-        <th class="hidden">Id</th>
-        <th>Nombre</th>
-        <th>Apellidos</th>
-        <th>Fecha Alta</th>
+        <th class="text-center">ID</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Apellidos</th>
+        <th class="text-center">Fecha Alta</th>
+        <th class="text-center">Acciones</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let usuario of usuarios">
-        <td class="hidden">{{usuario.usuarioID}}</td>
-        <td>{{usuario.nombre}}</td>
-        <td>{{usuario.apellidos}}</td>
-        <td>{{usuario.fechaAlta | date:'short'}}</td>
-        <td>
-          <!-- Agrega botones u otras acciones según sea necesario -->
-          <!-- <button class="btn btn-danger" (click)="deleteUser(usuario)">Delete User</button> -->
+      <tr *ngFor="let usuario of usuarios" class="table-light">
+        <td class="text-center">{{usuario.usuarioID}}</td>
+        <td class="text-center">{{usuario.nombre}}</td>
+        <td class="text-center">{{usuario.apellidos}}</td>
+        <td class="text-center">{{usuario.fechaAlta | date:'short'}}</td>
+        <td class="text-center">
+          <!-- Botón de Editar -->
+          <button class="btn btn-primary btn-sm mr-2">Editar</button>
+          
+          <!-- Botón de Borrar -->
+          <button class="btn btn-danger btn-sm" (click)="deleteUser(usuario)">Borrar</button>
         </td>
       </tr>
     </tbody>

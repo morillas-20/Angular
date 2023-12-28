@@ -9,6 +9,9 @@ const routes: Routes = [
   },
   {
     path:"users", component:ListarUsuariosComponent 
+  },
+  {
+    path:"eventos", component:ListarEventoComponent 
   }
 ];
 
