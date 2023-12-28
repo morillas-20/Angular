@@ -1,0 +1,43 @@
+<!-- add-usuario.component.html -->
+
+<div class="containermt-4">
+    <div class="header-container mb-4 d-flex justify-content-center align-items-center">
+        <!-- Título centrado -->
+      <h2 class="mb-0">Añadir Nuevo Usuario</h2>
+    </div>
+  
+    <div class="col-md-6 ">
+      <form #form="ngForm" (ngSubmit)="createUsuario()">
+        <div class="form-group">
+          <label for="nombre" class="font-weight-bold">Nombre:</label>
+          <input [(ngModel)]="usuario.nombre" placeholder="Ingrese el nombre" name="nombre" class="form-control" id="nombre" required>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="apellidos" class="font-weight-bold">Apellidos:</label>
+          <input [(ngModel)]="usuario.apellido" placeholder="Ingrese los apellidos" name="apellidos" class="form-control" id="apellidos" required>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="fechaalta" class="font-weight-bold">Fecha de Alta:</label>
+          <input type="string" [(ngModel)]="usuario.fechaalta" name="fechaAlta" class="form-control" id="fechaAlta" required>
+        </div>
+  
+        <!-- Agrega campos adicionales según sea necesario -->
+  
+        <div class="form-group col-md-6">
+          <label for="email" class="font-weight-bold">Correo electrónico:</label>
+          <input [(ngModel)]="usuario.mail" placeholder="Correo electrónico" name="email" class="form-control" id="email" required>
+        </div>
+  
+        <div class="form-group col-md-6">
+          <label for="password" class="font-weight-bold">Contraseña:</label>
+          <input [(ngModel)]="usuario.contrasena" type="password" placeholder="Contraseña" name="password" class="form-control" id="password" required>
+        </div>
+  
+        <button type="button" class="btn btn-success btn-block mt-3 " [disabled]="!form.valid" (click)="createUsuario()">Crear Usuario</button>
+        <button type="button" class="btn btn-danger btn-block mt-2"(click)="irUsuarios()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+  

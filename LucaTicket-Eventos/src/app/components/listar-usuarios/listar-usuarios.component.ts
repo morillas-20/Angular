@@ -1,7 +1,7 @@
 import { Component, OnInit  } from '@angular/core';
 import { Router } from '@angular/router';
-import { Usuarios } from '../../models/usuarios.model';
-import { UsuariosService } from '../../services/usuarios.service';
+import { Usuarios } from '../../models/usuarios.model1';
+import { UsuariosService } from '../../services/usuarios.service1';
 
 @Component({
   selector: 'app-listar-usuarios',
@@ -23,7 +23,9 @@ export class ListarUsuariosComponent implements OnInit{
       this.usuarios = this.usuarios.filter((u) => u !== usuario);
     });
   }
-
+  irAdd(){
+    this.router.navigate(["../addUser"])
+  }
   irEventos(){
     this.router.navigate(["../eventos"])
   }

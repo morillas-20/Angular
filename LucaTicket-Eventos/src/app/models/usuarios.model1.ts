@@ -2,7 +2,7 @@ export class Usuarios {
   usuarioID: number;
   nombre: string;
   apellido: string;
-  fechaalta: string;  // Cambiado a Date
+  fechaAlta: string;  // Cambiado a Date
   mail: string;
   contrasena: string;
 
@@ -10,7 +10,7 @@ export class Usuarios {
     this.usuarioID = 0;
     this.nombre = '';
     this.apellido = '';
-    this.fechaalta = '29-12-2023'; // Inicializado como la fecha actual
+    this.fechaAlta = '29-12-2023'; // Inicializado como la fecha actual
     this.mail = '';
     this.contrasena = '';
   }

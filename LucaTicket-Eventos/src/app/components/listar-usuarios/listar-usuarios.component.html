@@ -7,7 +7,7 @@
     <h2 class="mb-0">Users Details</h2>
 
     <!-- Botón de Añadir a la derecha -->
-    <button class="btn btn-success btn-lg">Añadir</button>
+    <button class="btn btn-success btn-lg" (click)="irAdd()">Añadir</button>
   </div>
   
   <table class="table table-bordered table-hover table-primary w-100 mx-auto">
@@ -24,8 +24,8 @@
       <tr *ngFor="let usuario of usuarios" class="table-light">
         <td class="text-center">{{usuario.usuarioID}}</td>
         <td class="text-center">{{usuario.nombre}}</td>
-        <td class="text-center">{{usuario.apellidos}}</td>
-        <td class="text-center">{{usuario.fechaAlta | date:'short'}}</td>
+        <td class="text-center">{{usuario.apellido}}</td>
+        <td class="text-center">{{usuario.fechaAlta}}</td>
         <td class="text-center">
           <!-- Botón de Editar -->
           <button class="btn btn-primary btn-sm mr-2">Editar</button>

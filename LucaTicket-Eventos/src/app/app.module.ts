@@ -11,6 +11,7 @@ import { AddEventoComponent } from './components/add-evento/add-evento.component
 import { FormsModule } from '@angular/forms';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 import { EditarEventoComponent } from './components/editar-evento/editar-evento.component';
+import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EditarEventoComponent } from './components/editar-evento/editar-evento.
     ListarEventoComponent,
     AddEventoComponent,
     ListarUsuariosComponent,
-    EditarEventoComponent
+    EditarEventoComponent,
+    AddUsuarioComponent
   ],
   imports: [
     BrowserModule,
