@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Eventos} from '../../models/eventos.model';
 import { EventoService } from '../../services/eventos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-editar-evento',
@@ -15,7 +16,7 @@ export class EditarEventoComponent implements OnInit{
   data:any;
   evento:Eventos = new Eventos();
 
-  constructor(private route: ActivatedRoute, private eventoService: EventoService){}
+  constructor(private route: ActivatedRoute, private eventoService: EventoService, private router: Router){}
 
   ngOnInit(){
     this.id = this.route.snapshot.params['id'];
@@ -25,16 +26,13 @@ export class EditarEventoComponent implements OnInit{
   getData(){
     this.eventoService.getEventoById(this.id).subscribe(res =>{
       this.data = res;
-      console.log("A ver qué sale. Datos devueltos para el servicio de un ID")
-      console.log(this.data.info)
       this.evento = this.data.info;
     })
   }
 
   editarEvento(){
-    console.log("---------Evento editado de ahora")
-    console.log("AAAAAAAAAAAAAAA"+this.evento.descripcioncorta)
-    this.eventoService.editarEvento(this.id,this.evento).subscribe(res=>{})
+    this.eventoService.editarEvento(this.id,this.evento).subscribe(res=>{});
+    this.router.navigate(["../"]);
   }
 
 }

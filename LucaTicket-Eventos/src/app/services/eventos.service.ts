@@ -37,8 +37,6 @@ export class EventoService {
   }
 
   public editarEvento(id:any,evento:Eventos){
-    console.log("SERVICIOS: "+JSON.stringify(evento));
-    console.log("EVENTO: "+evento.descripcioncorta);
     return this.http.put<Eventos>(this.EventoUrl + "/" + evento.eventoID, JSON.stringify(evento),httpOptions);
   }
 }
