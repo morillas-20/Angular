@@ -7,11 +7,13 @@ import { ListarEventoComponent } from './components/listar-evento/listar-evento.
 import { HttpClientModule } from '@angular/common/http';
 
 import { EventoService } from './services/eventos.service';
+import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListarEventoComponent
+    ListarEventoComponent,
+    ListarUsuariosComponent
   ],
   imports: [
     BrowserModule,
