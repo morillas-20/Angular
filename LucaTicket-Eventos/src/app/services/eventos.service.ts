@@ -31,4 +31,12 @@ export class EventoService {
   public createEvento(evento:Eventos) {
     return this.http.post<Eventos>(this.EventoUrl, evento);
   }
+
+  public getEventoById(id:any){
+    return this.http.get(this.EventoUrl + "/" + id);
+  }
+
+  public editarEvento(id:any,evento:Eventos){
+    return this.http.put<Eventos>(this.EventoUrl + "/" + evento.eventoID, JSON.stringify(evento),httpOptions);
+  }
 }
