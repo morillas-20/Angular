@@ -19,7 +19,9 @@ export class AddUsuarioComponent {
       .subscribe(data => {
         alert("Usuario generado de forma correcta.");
       });
-
   };
 
+  irUsuarios(){
+    this.router.navigate(["../users"])
+  }
 }

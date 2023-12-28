@@ -13,12 +13,12 @@
         <input [(ngModel)]="evento.nombre" placeholder="Ingrese el nombre" name="nombre" class="form-control" id="nombre" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group col-md-6">
         <label for="descripcioncorta" class="font-weight-bold">Descripción Corta:</label>
         <input [(ngModel)]="evento.descripcioncorta" placeholder="Ingrese una descripción corta" name="descripcioncorta" class="form-control" id="descripcioncorta" required>
       </div>
 
-      <div class="form-group">
+      <div class="form-group col-md-6">
         <label for="descripcionextendida" class="font-weight-bold">Descripción Extendida:</label>
         <textarea [(ngModel)]="evento.descripcionextendida" placeholder="Ingrese una descripción extendida" name="descripcionextendida" class="form-control" id="descripcionextendida" rows="3" required></textarea>
       </div>
@@ -35,12 +35,12 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group col-md-6">
         <label for="normas" class="font-weight-bold">Normas:</label>
         <textarea [(ngModel)]="evento.normas" placeholder="Ingrese las normas" name="normas" class="form-control" id="normas" rows="3" required></textarea>
       </div>
 
-      <div class="form-row">
+      <div class="form-row" col-md-6>
         <div class="form-group col-md-6">
           <label for="genero" class="font-weight-bold">Género:</label>
           <input [(ngModel)]="evento.genero" placeholder="Género" name="genero" class="form-control" id="genero" required>
