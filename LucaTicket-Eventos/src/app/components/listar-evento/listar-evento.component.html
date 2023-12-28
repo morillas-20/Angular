@@ -1,28 +1,44 @@
 <!-- listar-evento.component.html -->
 
+<<<<<<< HEAD
 <div>
   <button class="btn btn-danger" (click)="volverAdd()"> Añadir Evento</button>
 </div>
 
 <div class="col-md-6">
   <h2>Event Details</h2>
+=======
+<div class="container mt-4">
+  <div class="header-container mb-4 d-flex justify-content-between align-items-center">
+    <!-- Botón de Usuarios de color amarillo -->
+    <button class="btn btn-warning btn-lg" (click)="irUsuarios()">Usuarios</button>
+
+    <!-- Título en el centro -->
+    <h2 class="mb-0">Event Details</h2>
+
+    <!-- Botón de Añadir a la derecha -->
+    <button class="btn btn-success btn-lg">Añadir</button>
+  </div>
+>>>>>>> 428048f6258d578e5e6681ab63a20f1336480ea3
   
-  <table class="table table-striped">
-    <thead>
+  <table class="table table-bordered table-hover table-primary w-100 mx-auto">
+    <thead class="thead-dark">
       <tr>
-        <th class="hidden">Id</th>
-        <th>Nombre</th>
-        <th>Descripción Corta</th>
-        <th>Descripción Extendida</th>
-        <th>Fecha Evento</th>
-        <th>Precio Mínimo</th>
-        <th>Precio Máximo</th>
-        <th>Normas</th>
-        <th>Género</th>
-        <th>Recinto</th>
+        <th class="text-center">Id</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Descripción Corta</th>
+        <th class="text-center">Descripción Extendida</th>
+        <th class="text-center">Fecha Evento</th>
+        <th class="text-center">Precio Mínimo</th>
+        <th class="text-center">Precio Máximo</th>
+        <th class="text-center">Normas</th>
+        <th class="text-center">Género</th>
+        <th class="text-center">Recinto</th>
+        <th class="text-center">Acciones</th>
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
       <tr *ngFor="let evento of eventos">
         <td class="hidden">{{evento.eventoID}}</td>
         <td>{{evento.nombre}}</td>
@@ -34,6 +50,26 @@
         <td>{{evento.genero}}</td>
         <td>{{evento.recinto?.nombre}}</td>
         <td><button class="btn btn-danger" (click)="deleteEvento(evento)"> Borrar Evento</button></td>
+=======
+      <tr *ngFor="let evento of eventos" class="table-light">
+        <td class="text-center">{{evento.eventoID}}</td>
+        <td class="text-center">{{evento.nombre}}</td>
+        <td class="text-center">{{evento.descripcioncorta}}</td>
+        <td class="text-center">{{evento.descripcionextendida}}</td>
+        <td class="text-center">{{evento.fechaevento}}</td>
+        <td class="text-center">{{evento.preciomin}}</td>
+        <td class="text-center">{{evento.preciomax}}</td>
+        <td class="text-center">{{evento.normas}}</td>
+        <td class="text-center">{{evento.genero}}</td>
+        <td class="text-center">{{evento.recinto?.nombre}}</td>
+        <td class="text-center">
+          <!-- Botón de Editar -->
+          <button class="btn btn-primary btn-sm mr-2">Editar</button>
+          
+          <!-- Botón de Borrar -->
+          <button class="btn btn-danger btn-sm" (click)="deleteEvento(evento)">Borrar</button>
+        </td>
+>>>>>>> 428048f6258d578e5e6681ab63a20f1336480ea3
       </tr>
     </tbody>
   </table>
