@@ -1,0 +1,40 @@
+<!-- listar-evento.component.html -->
+
+<div class="col-md-6">
+  <h2>Event Details</h2>
+  
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="hidden">Id</th>
+        <th>Nombre</th>
+        <th>Descripción Corta</th>
+        <th>Descripción Extendida</th>
+        <th>Fecha Evento</th>
+        <th>Precio Mínimo</th>
+        <th>Precio Máximo</th>
+        <th>Normas</th>
+        <th>Género</th>
+        <th>Recinto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let evento of eventos">
+        <td class="hidden">{{evento.eventoID}}</td>
+        <td>{{evento.nombre}}</td>
+        <td>{{evento.descripcioncorta}}</td>
+        <td>{{evento.descripcionextendida}}</td>
+        <td>{{evento.fechaevento}}</td>
+        <td>{{evento.preciomin}}</td>
+        <td>{{evento.preciomax}}</td>
+        <td>{{evento.normas}}</td>
+        <td>{{evento.genero}}</td>
+        <td>{{evento.recinto?.nombre}}</td>
+        <td>
+          <!-- Agrega botones u otras acciones según sea necesario -->
+          <!-- <button class="btn btn-danger" (click)="deleteUser(evento)">Delete Evento</button> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
