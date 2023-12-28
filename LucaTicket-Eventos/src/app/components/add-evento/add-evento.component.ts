@@ -17,11 +17,8 @@ export class AddEventoComponent {
 
   createEvento(): void {
     console.log(this.evento);
-    this.eventoService.createEvento(this.evento)
-      .subscribe(data => {
-        alert("Evento generado de forma correcta.");
-      });
-
+    this.eventoService.createEvento(this.evento).subscribe(data => {});
+    this.router.navigate(["../"]);
   };
 
 }

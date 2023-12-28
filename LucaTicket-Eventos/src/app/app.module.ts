@@ -10,13 +10,15 @@ import { EventoService } from './services/eventos.service';
 import { AddEventoComponent } from './components/add-evento/add-evento.component';
 import { FormsModule } from '@angular/forms';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
+import { EditarEventoComponent } from './components/editar-evento/editar-evento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarEventoComponent,
     AddEventoComponent,
-    ListarUsuariosComponent
+    ListarUsuariosComponent,
+    EditarEventoComponent
   ],
   imports: [
     BrowserModule,

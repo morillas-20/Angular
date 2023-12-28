@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListarEventoComponent } from './components/listar-evento/listar-evento.component';
 import { AddEventoComponent } from './components/add-evento/add-evento.component';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
+import { EditarEventoComponent } from './components/editar-evento/editar-evento.component';
 
 const routes: Routes = [
   { 
@@ -20,7 +21,7 @@ const routes: Routes = [
     path:"users", component:ListarUsuariosComponent 
   },
   {
-    path:"eventos", component:ListarEventoComponent 
+    path:"eventos/:id", component:EditarEventoComponent
   }
 ];
 
