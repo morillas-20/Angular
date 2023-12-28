@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ListarEventoComponent } from './components/listar-evento/listar-evento.component';
+import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:"", component:ListarEventoComponent
+  },
+  {
+    path:"users", component:ListarUsuariosComponent 
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

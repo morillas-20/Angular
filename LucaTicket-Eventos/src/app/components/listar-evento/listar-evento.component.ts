@@ -21,9 +21,13 @@ export class ListarEventoComponent implements OnInit{
     });
   }
 
-  deleteUser(evento: Eventos): void {
+  deleteEvento(evento: Eventos): void {
     this.eventoService.deleteEvento(evento).subscribe((data) => {
       this.eventos = this.eventos.filter((u) => u !== evento);
     });
+  }
+
+  irUsuarios(){
+    this.router.navigate(["../users"])
   }
 }
