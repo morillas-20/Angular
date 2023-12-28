@@ -1,5 +1,9 @@
 <!-- listar-evento.component.html -->
 
+<div>
+  <button class="btn btn-danger" (click)="volverAdd()"> Añadir Evento</button>
+</div>
+
 <div class="col-md-6">
   <h2>Event Details</h2>
   
@@ -24,16 +28,12 @@
         <td>{{evento.nombre}}</td>
         <td>{{evento.descripcioncorta}}</td>
         <td>{{evento.descripcionextendida}}</td>
-        <td>{{evento.fechaevento}}</td>
         <td>{{evento.preciomin}}</td>
         <td>{{evento.preciomax}}</td>
         <td>{{evento.normas}}</td>
         <td>{{evento.genero}}</td>
         <td>{{evento.recinto?.nombre}}</td>
-        <td>
-          <!-- Agrega botones u otras acciones según sea necesario -->
-          <!-- <button class="btn btn-danger" (click)="deleteUser(evento)">Delete Evento</button> -->
-        </td>
+        <td><button class="btn btn-danger" (click)="deleteEvento(evento)"> Borrar Evento</button></td>
       </tr>
     </tbody>
   </table>
