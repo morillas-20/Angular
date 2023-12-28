@@ -1,5 +1,13 @@
 <!-- listar-evento.component.html -->
 
+<<<<<<< HEAD
+<div>
+  <button class="btn btn-danger" (click)="volverAdd()"> Añadir Evento</button>
+</div>
+
+<div class="col-md-6">
+  <h2>Event Details</h2>
+=======
 <div class="container mt-4">
   <div class="header-container mb-4 d-flex justify-content-between align-items-center">
     <!-- Botón de Usuarios de color amarillo -->
@@ -11,6 +19,7 @@
     <!-- Botón de Añadir a la derecha -->
     <button class="btn btn-success btn-lg">Añadir</button>
   </div>
+>>>>>>> 428048f6258d578e5e6681ab63a20f1336480ea3
   
   <table class="table table-bordered table-hover table-primary w-100 mx-auto">
     <thead class="thead-dark">
@@ -29,6 +38,19 @@
       </tr>
     </thead>
     <tbody>
+<<<<<<< HEAD
+      <tr *ngFor="let evento of eventos">
+        <td class="hidden">{{evento.eventoID}}</td>
+        <td>{{evento.nombre}}</td>
+        <td>{{evento.descripcioncorta}}</td>
+        <td>{{evento.descripcionextendida}}</td>
+        <td>{{evento.preciomin}}</td>
+        <td>{{evento.preciomax}}</td>
+        <td>{{evento.normas}}</td>
+        <td>{{evento.genero}}</td>
+        <td>{{evento.recinto?.nombre}}</td>
+        <td><button class="btn btn-danger" (click)="deleteEvento(evento)"> Borrar Evento</button></td>
+=======
       <tr *ngFor="let evento of eventos" class="table-light">
         <td class="text-center">{{evento.eventoID}}</td>
         <td class="text-center">{{evento.nombre}}</td>
@@ -47,6 +69,7 @@
           <!-- Botón de Borrar -->
           <button class="btn btn-danger btn-sm" (click)="deleteEvento(evento)">Borrar</button>
         </td>
+>>>>>>> 428048f6258d578e5e6681ab63a20f1336480ea3
       </tr>
     </tbody>
   </table>

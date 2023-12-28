@@ -27,6 +27,9 @@ export class ListarEventoComponent implements OnInit{
     });
   }
 
+  volverAdd(){
+    this.router.navigate(["../add"])
+  }
   irUsuarios(){
     this.router.navigate(["../users"])
   }

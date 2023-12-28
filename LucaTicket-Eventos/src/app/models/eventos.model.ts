@@ -15,31 +15,22 @@ export class Eventos {
       nombre: string;
       ciudad: string;
       direccion: string;
-      tiporecinto: string;
-      aforo: string;
+      tipoRecinto: string;
+      aforo: number;
     };
   
-    constructor(eventoID: number, nombre: string, descripcioncorta: string, descripcionextendida: string,
-                foto: string, fechaevento: string, horaevento: string, preciomin: number, preciomax: number,
-                normas: string, genero: string, recinto: {
-                  id: number,
-                  nombre: string,
-                  ciudad: string,
-                  direccion: string,
-                  tiporecinto: string,
-                  aforo: string
-                }) {
-      this.eventoID = eventoID;
-      this.nombre = nombre;
-      this.descripcioncorta = descripcioncorta;
-      this.descripcionextendida = descripcionextendida;
-      this.foto = foto;
-      this.fechaevento = fechaevento;
-      this.horaevento = horaevento;
-      this.preciomin = preciomin;
-      this.preciomax = preciomax;
-      this.normas = normas;
-      this.genero = genero;
-      this.recinto = recinto;
+    constructor() {
+      this.eventoID = 0;
+      this.nombre = '';
+      this.descripcioncorta = '';
+      this.descripcionextendida = '';
+      this.foto = 'foto.jpg';
+      this.fechaevento = '12-12-2023';
+      this.horaevento = '12:00'
+      this.preciomin = 0;
+      this.preciomax = 0;
+      this.normas = '';
+      this.genero = '';
+      this.recinto = {id:1,nombre:'',ciudad:'Nueva York',direccion:'Empire State',tipoRecinto:'ESTADIO',aforo:1000};
     }
 }

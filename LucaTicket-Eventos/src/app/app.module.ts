@@ -7,18 +7,22 @@ import { ListarEventoComponent } from './components/listar-evento/listar-evento.
 import { HttpClientModule } from '@angular/common/http';
 
 import { EventoService } from './services/eventos.service';
+import { AddEventoComponent } from './components/add-evento/add-evento.component';
+import { FormsModule } from '@angular/forms';
 import { ListarUsuariosComponent } from './components/listar-usuarios/listar-usuarios.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListarEventoComponent,
+    AddEventoComponent,
     ListarUsuariosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [EventoService],
   bootstrap: [AppComponent]
