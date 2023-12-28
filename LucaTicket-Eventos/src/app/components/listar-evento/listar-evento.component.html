@@ -10,7 +10,7 @@
     <h2 class="mb-0">Event Details</h2>
 
     <!-- Botón de Añadir a la derecha -->
-    <button class="btn btn-success btn-lg">Añadir</button>
+    <button class="btn btn-success btn-lg" (click)="volverAdd()">Añadir</button>
   </div>
   
   <table class="table table-bordered table-hover table-primary w-100 mx-auto">
@@ -30,7 +30,6 @@
       </tr>
     </thead>
     <tbody>
-
       <tr *ngFor="let evento of eventos" class="table-light">
         <td class="text-center">{{evento.eventoID}}</td>
         <td class="text-center">{{evento.nombre}}</td>
@@ -49,6 +48,7 @@
           <!-- Botón de Borrar -->
           <button class="btn btn-danger btn-sm" (click)="deleteEvento(evento)">Borrar</button>
         </td>
+
       </tr>
     </tbody>
   </table>
