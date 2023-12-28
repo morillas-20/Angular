@@ -1,0 +1,33 @@
+<div class="col-md-6">
+  <h2 class="text-center">Añadir Usuario</h2>
+  <form>
+      <div class="form-group">
+          <label for="nombre">Nombre:</label>
+          <input [(ngModel)]="usuario.nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
+      </div>
+
+      <div class="form-group">
+          <label for="apellido">Apellidos:</label>
+          <input [(ngModel)]="usuario.apellido" placeholder="Apellidos" name="apellidos" class="form-control" id="apellidos">
+      </div>
+
+      <div class="form-group">
+        <label for="fechaalta">Fecha de Alta:</label>
+        <input type="string" [(ngModel)]="usuario.fechaalta" name="fechaAlta" class="form-control" id="fechaAlta">
+      </div>
+
+      <!-- Agrega campos adicionales según sea necesario -->
+      
+      <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input [(ngModel)]="usuario.mail" placeholder="Correo electrónico" name="email" class="form-control" id="email">
+      </div>
+
+      <div class="form-group">
+          <label for="password">Contraseña:</label>
+          <input [(ngModel)]="usuario.contrasena" type="password" placeholder="Contraseña" name="password" class="form-control" id="password">
+      </div>
+
+      <button class="btn btn-success" (click)="createUsuario()">Crear</button>
+  </form>
+</div>

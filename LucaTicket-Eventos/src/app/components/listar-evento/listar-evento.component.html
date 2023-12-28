@@ -40,7 +40,7 @@
         <td class="text-center">{{evento.preciomax}}</td>
         <td class="text-center">{{evento.normas}}</td>
         <td class="text-center">{{evento.genero}}</td>
-        <td class="text-center">{{evento.recinto?.nombre}}</td>
+        <td class="text-center">{{evento.recinto ? evento.recinto.nombre : 'N/A'}}</td>
         <td class="text-center">
           <!-- Botón de Editar -->
           <button class="btn btn-primary btn-sm mr-2">Editar</button>

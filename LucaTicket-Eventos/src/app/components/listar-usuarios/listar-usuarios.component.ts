@@ -23,7 +23,9 @@ export class ListarUsuariosComponent implements OnInit{
       this.usuarios = this.usuarios.filter((u) => u !== usuario);
     });
   }
-
+  irAdd(){
+    this.router.navigate(["../addUser"])
+  }
   irEventos(){
     this.router.navigate(["../eventos"])
   }
