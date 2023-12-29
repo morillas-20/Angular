@@ -44,10 +44,6 @@
     margin-bottom: 30px;
   }
    
-  /* Color de fondo suave para el cuerpo de la página */
-  body {
-    background-color: #343a40; /* Color de fondo suave */
-  }
   
   /* Estilo para el contenedor del formulario */
   .containermt-4{
@@ -57,6 +53,7 @@
     margin-top: 0px; /* Agrega un margen superior */
     margin-bottom: 0px; /* Agrega un margen inferior */
     padding: 30px; /* Ajusta el espacio interior según tus preferencias */
+    height: 100vh;
   }
   form {
     max-width: 600px; /* Puedes ajustar este valor según tus preferencias */
