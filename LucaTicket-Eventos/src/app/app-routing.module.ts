@@ -27,6 +27,9 @@ const routes: Routes = [
   },
   {
     path:"eventos/:id", component:EditarEventoComponent
+  },
+  {
+    path:"eventos", component:ListarEventoComponent
   }
 ];
 

@@ -1,46 +1,54 @@
-<div class="col-md-6">
-    <h2 class="text-center">Editar Evento</h2>
-  <form>
-    <div class="form-group">
-      <label for="nombre">Nombre evento:</label>
-      <input [(ngModel)]="evento.nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre">
-    </div>
-  
-    <div class="form-group">
-      <label for="descripcioncorta">Descripción corta:</label>
-      <input [(ngModel)]="evento.descripcioncorta" placeholder="Descripción Corta" name="descripcioncorta" class="form-control" id="descripcioncorta">
-    </div>
-  
-    <div class="form-group">
-      <label for="descripcionextendida">Descripción extendida:</label>
-      <input [(ngModel)]="evento.descripcionextendida" placeholder="Descripción extendida" name="descripcionextendida" class="form-control" id="descripcionextendida">
-    </div>
-
-    <div class="form-group">
-        <label for="preciomin">Precio mínimo:</label>
-        <input [(ngModel)]="evento.preciomin" placeholder="Precio mínimo" name="preciomin" class="form-control" id="preciomin">
-    </div>
-
-    <div class="form-group">
-        <label for="preciomax">Precio máximo:</label>
-        <input [(ngModel)]="evento.preciomax" placeholder="Precio máximo" name="preciomax" class="form-control" id="preciomax">
-    </div>
-
-    <div class="form-group">
-        <label for="normas">Normas:</label>
-        <input [(ngModel)]="evento.normas" placeholder="Normas" name="normas" class="form-control" id="normas">
-    </div>
-
-    <div class="form-group">
-        <label for="genero">Género:</label>
-        <input [(ngModel)]="evento.genero" placeholder="Género" name="genero" class="form-control" id="genero">
-    </div>
-
-    <div class="form-group">
-        <label for="recinto">Recinto nombre:</label>
-        <input [(ngModel)]="evento.recinto.nombre" placeholder="Recinto" name="recinto" class="form-control" id="recinto">
-    </div>    
-  
-    <button class="btn btn-success" (click)="editarEvento()">Editar</button>
-  </form>
+<div class="containermt-4">
+  <div class="header-container mb-4 d-flex justify-content-center align-items-center">
+    <!-- Título centrado -->
+      <h2 class="mb-0">Editar Evento</h2>
   </div>
+
+  <div class="col-md-6">
+    <form #form="ngForm" (ngSubmit)="editarEvento()">
+       <div class="form-group">
+              <label for="nombre" class="font-weight-bold">Nombre evento:</label>
+              <input [(ngModel)]="evento.nombre" placeholder="Nombre" name="nombre" class="form-control" id="nombre" required>
+          </div>
+
+          <div class="form-group">
+              <label for="descripcioncorta" class="font-weight-bold">Descripción corta:</label>
+              <input [(ngModel)]="evento.descripcioncorta" placeholder="Descripción Corta" name="descripcioncorta" class="form-control" id="descripcioncorta" required>
+          </div>
+
+          <div class="form-group">
+              <label for="descripcionextendida" class="font-weight-bold">Descripción extendida:</label>
+              <input [(ngModel)]="evento.descripcionextendida" placeholder="Descripción extendida" name="descripcionextendida" class="form-control" id="descripcionextendida" required>
+          </div>
+
+          <div class="form-group">
+              <label for="preciomin" class="font-weight-bold">Precio mínimo:</label>
+              <input [(ngModel)]="evento.preciomin" placeholder="Precio mínimo" name="preciomin" class="form-control" id="preciomin" required>
+          </div>
+
+          <div class="form-group">
+              <label for="preciomax" class="font-weight-bold">Precio máximo:</label>
+              <input [(ngModel)]="evento.preciomax" placeholder="Precio máximo" name="preciomax" class="form-control" id="preciomax" required>
+          </div>
+
+          <div class="form-group">
+              <label for="normas" class="font-weight-bold">Normas:</label>
+              <input [(ngModel)]="evento.normas" placeholder="Normas" name="normas" class="form-control" id="normas" required>
+          </div>
+
+          <div class="form-group">
+              <label for="genero" class="font-weight-bold">Género:</label>
+              <input [(ngModel)]="evento.genero" placeholder="Género" name="genero" class="form-control" id="genero" required>
+          </div>
+
+          <div class="form-group">
+              <label for="recinto" class="font-weight-bold">Recinto nombre:</label>
+              <input [(ngModel)]="evento.recinto.nombre" placeholder="Recinto" name="recinto" class="form-control" id="recinto" required>
+          </div>
+
+          <button type="button" class="btn btn-success btn-block mt-3" [disabled]="!form.valid" (click)="editarEvento()">Editar</button>
+          <button type="button" class="btn btn-danger btn-block mt-2" (click)="irEventos()">Cancelar</button>
+
+      </form>
+  </div>
+</div>
