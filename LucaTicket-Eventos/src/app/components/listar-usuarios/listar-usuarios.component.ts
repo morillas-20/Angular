@@ -29,5 +29,7 @@ export class ListarUsuariosComponent implements OnInit{
   irEventos(){
     this.router.navigate(["../eventos"])
   }
-
+  editarUsuarios(usuario: Usuarios){
+    this.router.navigate(["../usuarios/"+usuario.usuarioID])
+  }
 }

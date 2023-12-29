@@ -28,7 +28,7 @@
         <td class="text-center">{{usuario.fechaAlta}}</td>
         <td class="text-center">
           <!-- Botón de Editar -->
-          <button class="btn btn-primary btn-sm mr-2">Editar</button>
+          <button class="btn btn-primary btn-sm mr-2" (click)="editarUsuarios(usuario)">Editar</button>
           
           <!-- Botón de Borrar -->
           <button class="btn btn-danger btn-sm" (click)="deleteUser(usuario)">Borrar</button>

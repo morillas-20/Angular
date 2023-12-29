@@ -31,4 +31,13 @@ export class UsuariosService {
   public createUsuario(usuario:Usuarios) {
     return this.http.post<Usuarios>(this.UsuarioUrl, usuario);
   }
+
+  public getUsuarioById(id:any){
+    return this.http.get(this.UsuarioUrl + "/" + id);
+  }
+
+  public editarUsuarios(id:any,usuario:Usuarios){
+    console.log(JSON.stringify(usuario) + "--" +  id);
+    return this.http.put<Usuarios>(this.UsuarioUrl + "/" + usuario.usuarioID, JSON.stringify(usuario),httpOptions);
+  }
 }
